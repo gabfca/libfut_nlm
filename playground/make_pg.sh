@@ -1,0 +1,1 @@
+clang++ -std=c++2c -O2 playground/playground.cpp -l m -l cuda -l cudart -l nvrtc -o libfut_nlm_pg lib/libfut_nlm.o
