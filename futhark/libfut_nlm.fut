@@ -105,26 +105,7 @@ module fut_nlm =
 
 }
 
-open fut_nlm 
-
-def test =  unflatten (map(\tup -> [tup.0, tup.1]) (region.indices_of_reflection_bounded_subregion (4, 4) 4 4))
-
--- > test
-
-def test_2 = 
-    let test_arr =  iota2d 254
-    let test_arr = map(\(x, y) -> zero_vec) test_arr
-    
-    let indices = region.indices_of_reflection_bounded_subregion (4, 4) 254 4
-    let subregion = region.subregion_from_indices {pixs = unflatten test_arr } indices
-
-    let indices' = region.indices_of_reflection_bounded_subregion (100, 100) 254 4
-    let subregion' = region.subregion_from_indices {pixs = unflatten test_arr } indices'
-
-    let kt = (flatten)subregion.pixs
-    in patchwise.patch_similarity.euclidean_distance kt kt
--- > test_2
-
+open fut_nlm
 
 -- Since this is an entry function we couldn't take an adequately sized input array.
 entry libfnlm_patchwise_nlm 
