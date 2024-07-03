@@ -10,7 +10,6 @@ module vspace4 = mk_vspace vector_4 f32
 module fut_nlm =  
 {   
     def iota2d n = flatten (map (\y -> map (\x -> (x, y)) (iota n)) (iota n))
-    def nested_iota2d n = (map (\y -> map (\x -> (x, y)) (iota n)) (iota n))
 
     def gaussian_weight(d: f32) (h: f32) = f32.exp ( (-d) / h)
 
