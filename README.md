@@ -6,4 +6,4 @@ With special bindings in modern C++.
 ![Denoised output with h=0.32, a patch side of 7 and a search window side 15.](img/output.bmp)
 
 
-To try backends other than Futhark's CUDA one, edit ``/lib/futhark/make.sh`` accordingly.
+To try backends other than Futhark's CUDA one, edit ``/lib/futhark/make_futhark.sh`` accordingly.
